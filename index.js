@@ -2,7 +2,7 @@ const axios = require('axios')
 const createServer = require('http').createServer
 const url = require('url')
 const config = require('./config')
-
+const PORT = process.env.PORT || 3000
 
 const headers = {
     'Content-Type': 'application.json',
@@ -38,6 +38,6 @@ const server = createServer((req, res) => {
     }
 })
 
-server.listen(3000, ()=> {
+server.listen(PORT, ()=> {
     console.log('Listening on port 3000')
 })
